@@ -136,3 +136,49 @@
 1. Support ünvanına e‑mail göndər.  
 **Gözlənilən nəticə:** Avtomatik təsdiq cavabı gəlir və ticket yaradılır.  
 **Keçid meyarı:** Ticket sistemdə mövcuddur və auto‑reply alınır.
+
+### TC-17 — In‑app chat → ticket və SLA  
+**US:** US-10  
+**Şərt:** In‑app chat aktivdir; agent mövcuddur.  
+**Addımlar:**  
+1. Chat vasitəsilə mesaj göndər. 2. İlk cavab vaxtını ölç.  
+**Gözlənilən nəticə:** Ticket yaradılır; ilk cavab 24 saat içində verilir.  
+**Keçid meyarı:** SLA yerinə yetirilir və chat‑ticket əlaqələndirilir.
+
+### TC-18 — Kritik eskalasiya  
+**US:** US-10  
+**Şərt:** Hüquq və müəllif hüquqları ilə bağlı kritik şikayət daxil edilir.  
+**Addımlar:**  
+1. Kritik tipli ticket yarad.  
+**Gözlənilən nəticə:** Eskalasiya workflow avtomatik işə düşür və prioritet təyin olunur.  
+**Keçid meyarı:** Ticket hüquq şöbəsinə yönləndirilir və prioritetləşdirilir.
+
+---
+
+## Test Məlumatları və Alətlər
+- **Test hesabları:** admin, standart istifadəçi, abunəli istifadəçi.  
+- **Nümunə kitablar:** ictimai domen və lisenziyalı test nümunələri.  
+- **Ödəniş sandbox:** uğurlu və uğursuz test kartları.  
+- **Analytics:** seçilmiş analytics alətində test layihəsi.  
+- **Dəstək:** ticketing sandbox və test e‑mail inbox.
+
+---
+
+## Cədvəl və Çıxış Kriteriyaları
+**Test dövrü:** hər release üçün 2 həftə.  
+**Çıxış kriteriyaları:**  
+- Bütün **High** severity defektlər həll edilib və ya qəbul edilmiş mitigasiya var.  
+- Yüksək prioritet user story-ların qəbul meyarları keçib.  
+- Analytics eventləri və dəstək axınları təsdiqlənib.
+
+---
+
+## Hesabatlandırma
+- **Gündəlik standup:** QA statusu.  
+- **Defekt izləmə:** GitHub Issues və ya JIRA; severity və owner göstərilsin.  
+- **Yekun hesabat:** pass/fail xülasəsi, açıq defektlər və tövsiyələr.
+
+---
+
+## Baxım və Regressiya
+- MVP buraxılışından sonra həftəlik smoke testlər: login, oxucu, ödəniş, analytics, dəstək.
